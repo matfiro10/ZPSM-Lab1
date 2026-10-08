@@ -1,4 +1,5 @@
 import { Calculator } from './calculator.ts';
+import { CalculatorLodash } from './calculatorLodash.ts';
 import { sum_with_for } from './sum_with_for.ts';
 import { sum_with_guards } from './sum_with_guards.ts';
 import { sum_with_reduce } from './sum_with_reduce.ts';
@@ -49,3 +50,20 @@ calc = new Calculator([2, 'seven', 4, null, 8]);
 
 console.log(calc.add());        // 14
 console.log(calc.multiply());   // 64
+
+console.log(`\n`);
+console.log(`Test: calculatorLodash class with lodash\n`);
+
+let calcLodash = new CalculatorLodash([Infinity, "6", 3, 0, 5]);
+
+console.log(`Sum: ${calcLodash.add()}`);                  // 8
+console.log(`Difference: ${calcLodash.subtract()}`);      // -2
+console.log(`Product: ${calcLodash.multiply()}`);         // 0
+console.log(`Quotient: ${calcLodash.divide()}`);          // NaN
+
+console.log(`\n`);
+
+calcLodash = new CalculatorLodash([2, 'seven', 4, null, 8]);
+
+console.log(calcLodash.add());        // 14
+console.log(calcLodash.multiply());   // 64
