@@ -8,21 +8,19 @@ const year: number = 2026;
 
 console.log(`${course} ${year} - environment is up`);
 
-console.log(`\n\n`);
-
 console.log(`Test: sum using for loop\n`);
 console.log(sum_with_for(1, 2, 3, 4, 5));   // 15
 console.log(sum_with_for(2, 4, 6));         // 12
 console.log(sum_with_for());                // 0
 
-console.log(`\n\n`);
+console.log(`\n`);
 
 console.log(`Test: sum using reduce\n`);
 console.log(sum_with_reduce(1, 2, 3, 4, 5));     // 15
 console.log(sum_with_reduce(2, 4, 6));           // 12
 console.log(sum_with_reduce());                  // 0
 
-console.log(`\n\n`);
+console.log(`\n`);
 
 console.log(`Test: sum with type guards\n`);
 console.log(`Total sum: ${sum_with_guards(5, "5")}\n`);                             // 5
@@ -32,7 +30,7 @@ console.log(`Total sum: ${sum_with_guards(2, {}, 6)}\n`);                       
 console.log(`Total sum: ${sum_with_guards(5, Object, () => {}, 10)}\n`);            // 15
 console.log(`Total sum: ${sum_with_guards(null, undefined)}\n`);                    // 0
 
-console.log(`\n\n`);
+console.log(`\n`);
 
 console.log(`Test: calculator class\n`);
 
@@ -52,7 +50,7 @@ console.log(calc.multiply());   // 64
 
 console.log(calc.getRejectedValues());
 
-console.log(`\n\n`);
+console.log(`\n`);
 
 console.log(`Testing floating-point sum order and precision\n`);
 
