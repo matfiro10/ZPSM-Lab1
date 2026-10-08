@@ -49,3 +49,18 @@ calc = new Calculator([2, 'seven', 4, null, 8]);
 
 console.log(calc.add());        // 14
 console.log(calc.multiply());   // 64
+
+console.log(calc.getRejectedValues());
+
+console.log(`\n\n`);
+
+console.log(`Testing floating-point sum order and precision\n`);
+
+const data = Array.from({ length: 1000 }, () => Math.random());
+const sum1 = data.reduce((acc, val) => acc + val, 0);
+const sum2 = [...data].reverse().reduce((acc, val) => acc + val, 0);
+
+console.log('Suma normalna: ', sum1);
+console.log('Suma odwrócona: ', sum2);
+console.log('Czy są równe? ', sum1 === sum2); 
+console.log('Różnica: ', Math.abs(sum1 - sum2)); 
